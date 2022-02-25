@@ -1,16 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 import ProductCard from './ProductCard'
+import { productsData } from './utils'
 
 const Products = ({cartegory}) => {
   return (
     <StyledProducts>
-        <h5  className="products-section__title">{cartegory || 'Cartegory Name'}</h5>
-        <div className="products-section__left">
+        <h5  className="products-section__title">{cartegory || 'Category Name'}</h5>
+        <div className="products-section__left" >
+        {productsData.map((item) => (
             <ProductCard
-                title = "Apollo Running Short"
-                price = '50.00'
+                img = { item.img}
+                key = {item.id}
+                title = {item.title}
+                price = {item.price}
             />
+        ))}
         </div>
     </StyledProducts>
   )

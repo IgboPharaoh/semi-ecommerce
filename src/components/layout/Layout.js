@@ -10,7 +10,6 @@ const Layout = () => {
   )
 }
 const StyledLayout = styled.section`
-    border: 1px solid var(--primaryGreen);
     margin: 0 auto;
     padding: 0rem 10rem;
 `
