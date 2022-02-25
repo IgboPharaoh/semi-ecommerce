@@ -28,8 +28,7 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'DM Sans', sans-serif;
-   font-family: 'Shippori Mincho', serif;
+  font-family: 'Raleway', sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -52,4 +51,9 @@ code {
 }
 html {
 	font-size: 62.5%;
-  }
+}
+
+:root{
+	--primaryGreen: #5ECE7B;
+}
+
