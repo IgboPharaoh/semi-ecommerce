@@ -17,9 +17,23 @@ const StyledNavLink = styled.div`
     display: flex;
     font-size: 1.6rem;
     line-height: 1.92rem;
+    cursor: pointer;
+    .border-bottom{
+        background-color:var(--primaryGreen);
+        height: 2px;
+        position: relative;
+        top: 1rem;
+        left: 0rem;
+        bottom: 0rem;
+        display: none;
+    }
     :hover{
         color: var(--primaryGreen);
+        transition: ease-in-out 0.5s;
         font-weight: 600;
+        .border-bottom{
+        display: block;
+    }
     }
 `
 export default Navlink
