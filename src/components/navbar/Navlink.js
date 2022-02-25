@@ -29,7 +29,6 @@ const StyledNavLink = styled.div`
     }
     :hover{
         color: var(--primaryGreen);
-        transition: ease-in-out 0.5s;
         font-weight: 600;
         .border-bottom{
         display: block;

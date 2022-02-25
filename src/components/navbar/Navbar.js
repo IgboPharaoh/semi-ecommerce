@@ -50,10 +50,6 @@ const StyledNav = styled.nav`
         &__right{
             display: flex;
             align-items: center;
-            /* justify-content: space-between; */
-            select{
-                background-colo:red;
-            }
         }
     }
 `

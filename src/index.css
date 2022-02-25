@@ -51,9 +51,11 @@ code {
 }
 html {
 	font-size: 62.5%;
+	color: var(--primaryBlack);
 }
 
 :root{
 	--primaryGreen: #5ECE7B;
+	--primaryBlack: #1D1F22;
 }
 
