@@ -21,6 +21,7 @@ const Products = ({cartegory}) => {
   )
 }
 const StyledProducts = styled.section`
+    padding-bottom: 10.3rem;
     .products-section{
         &__title{
             padding: 8rem 0rem 10.3rem;
@@ -29,8 +30,15 @@ const StyledProducts = styled.section`
         }
         &__left{
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(386px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 4rem;
+        }
+    }
+    @media(max-width: 768px){
+        .products-section{
+            &__left{
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
         }
     }
 `

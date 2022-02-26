@@ -26,15 +26,18 @@ const StyledCard = styled.div`
     .product-card{
         &__product-img{
             height: 33rem;
+            width: 100%;
         }
         &__cart-section{
-            /* justify-content: space-between; */
             float: right;
             background: var(--primaryGreen);
             height: 5.2rem;
             width: 5.2rem;
             border-radius: 50%;
             display: none; 
+            position: relative;
+            top: -2.6rem;
+            right: 1.5rem;
             svg {
             height: 100%;
             padding-left: 1.4rem;
@@ -62,6 +65,7 @@ const StyledCard = styled.div`
         .product-card{
             &__cart-section{
                 display: block;
+                z-index: 100;
             }
         }
     }
