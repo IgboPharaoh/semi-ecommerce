@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const CustomButton = ({icon, imgClassname, buttonText, textColor, backgroundColor, borderRadius, paddingTopAndBottom, paddingRightAndLeft, fontSize, className, type, onClick, minPaddingTopAndBottom, minPaddingRightAndLeft, spanText, fontWeight, buttonTextClassName, hoverBackgroundColor, hoverTextColor, hoverBorderColor}) => {
+const CustomButton = ({icon, imgClassname, buttonText, textColor, backgroundColor, borderRadius, paddingTopAndBottom, paddingRightAndLeft, fontSize, className, type, onClick, minPaddingTopAndBottom, minPaddingRightAndLeft, spanText, fontWeight, buttonTextClassName, hoverBackgroundColor, hoverTextColor, hoverBorderColor, border}) => {
   return (
     <StyledButton
     textColor={textColor}
@@ -19,6 +19,7 @@ const CustomButton = ({icon, imgClassname, buttonText, textColor, backgroundColo
     hoverTextColor={hoverTextColor}
     hoverBackgroundColor={hoverBackgroundColor}
     hoverBorderColor={hoverBorderColor}
+    border ={border}
     >
         <div className="text-container">
             <img src={icon} alt="" className={imgClassname}/>
@@ -46,14 +47,14 @@ const StyledButton = styled.button`
     }
 
     color: ${({textColor}) => textColor || 'var(--white)'};
-    background-color: ${({ backgroundColor }) => backgroundColor ||  'var(--tealPrimary)' };
+    background-color: ${({ backgroundColor }) => backgroundColor ||  'var(--primaryGreen)' };
     color: ${({ textColor }) => textColor || "white"};
     text-align: left;
-    padding-top: ${({ paddingTopAndBottom }) => paddingTopAndBottom || 1.2}rem;
-    padding-bottom: ${({ paddingTopAndBottom }) => paddingTopAndBottom || 1.2}rem;
+    padding-top: ${({ paddingTopAndBottom }) => paddingTopAndBottom || 1.6}rem;
+    padding-bottom: ${({ paddingTopAndBottom }) => paddingTopAndBottom || 1.6}rem;
     padding-right: ${({ paddingRightAndLeft }) => paddingRightAndLeft || 3.2}rem;
     padding-left: ${({ paddingRightAndLeft }) => paddingRightAndLeft || 3.2}rem;
-    border: none;
+    border: ${({border}) => border || '1px solid black'};
     font-weight: ${({fontWeight }) => fontWeight || 400}
     font-size: ${({ fontSize }) => fontSize || 1.4}rem;
     border-radius: ${({ borderRadius }) => borderRadius || 0.5}rem;
