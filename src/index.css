@@ -28,6 +28,7 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto Condensed', sans-serif;
   font-family: 'Raleway', sans-serif;
 }
 ol, ul {
@@ -57,5 +58,7 @@ html {
 :root{
 	--primaryGreen: #5ECE7B;
 	--primaryBlack: #1D1F22;
+	--gray: #A6A6A6;
+	--white: #FFF;
 }
 

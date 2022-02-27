@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import Cartegory from '../Cartegory/Cartegory'
+import ProductSelect from '../product-select/ProductSelect'
 
 const Layout = () => {
   return (
     <StyledLayout>
         <Cartegory/>
+        <ProductSelect/>
     </StyledLayout>
   )
 }

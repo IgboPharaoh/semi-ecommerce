@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import ProductSelectDetails from './ProductSelectDetails'
 import ProductSelectImage from './ProductSelectImage'
-import { productsData } from '../products/utils'
+import { productsData } from '../../utils'
 
 const ProductSelect = () => {
     // for (let i = 0; i < productsData.length; i++) {
@@ -11,18 +11,19 @@ const ProductSelect = () => {
   return (
     <StyledProductSelect>
         <div>
-            {productsData.map((item) => (
+            {[productsData[0]].map((item) => (
                 <ProductSelectImage
-                    productImage = {item.img[0]}
+                    productImage = {item.img}
                 />
             ))}
         </div>
-        <div>
-            {productsData.map((item) => (    
+        <div className= 'product-select__details'>
+            {[productsData[0]].map((item) => (    
                 <ProductSelectDetails
-                    productTitle= {item.title[0]}
-                    productPrice = {item.price[0]}
-                    productDescription= {item.desc[0]}
+                    productTitle= {item.title}
+                    productPrice = {item.price}
+                    productDescription= {item.desc}
+                    productBrand = {item.titlebrand}
                 />
             ))}
         </div>
@@ -32,5 +33,11 @@ const ProductSelect = () => {
 
 const StyledProductSelect = styled.div`
     display: flex;
+    /* justify-content: space-between; */
+    .product-select{
+        &__details{
+            max-width: 29.2rem;
+        }
+    }
 `
 export default ProductSelect

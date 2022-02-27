@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const CustomButton = ({icon, imgClassname, buttonText, textColor, backgroundColor, borderRadius, paddingTopAndBottom, paddingRightAndLeft, fontSize, className, type, onClick, minPaddingTopAndBottom, minPaddingRightAndLeft, spanText, fontWeight, buttonTextClassName, hoverBackgroundColor, hoverTextColor, hoverBorderColor, border}) => {
+const CustomButton = ({icon, imgClassname, buttonText, textColor, backgroundColor, borderRadius, paddingTopAndBottom, paddingRightAndLeft, fontSize, className, type, onClick, minPaddingTopAndBottom, minPaddingRightAndLeft, spanText, fontWeight, buttonTextClassName, hoverBackgroundColor, hoverTextColor, hoverBorderColor, border, buttonWidth}) => {
   return (
     <StyledButton
     textColor={textColor}
@@ -20,6 +20,7 @@ const CustomButton = ({icon, imgClassname, buttonText, textColor, backgroundColo
     hoverBackgroundColor={hoverBackgroundColor}
     hoverBorderColor={hoverBorderColor}
     border ={border}
+    buttonWidth = {buttonWidth}
     >
         <div className="text-container">
             <img src={icon} alt="" className={imgClassname}/>
@@ -33,7 +34,7 @@ const StyledButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: DM sans;
+    font-family: 'Raleway', sans-serif;
 
     .text-container{
         display: flex;
@@ -55,10 +56,12 @@ const StyledButton = styled.button`
     padding-right: ${({ paddingRightAndLeft }) => paddingRightAndLeft || 3.2}rem;
     padding-left: ${({ paddingRightAndLeft }) => paddingRightAndLeft || 3.2}rem;
     border: ${({border}) => border || '1px solid black'};
-    font-weight: ${({fontWeight }) => fontWeight || 400}
+    font-weight: ${({fontWeight }) => fontWeight || 600};
     font-size: ${({ fontSize }) => fontSize || 1.4}rem;
-    border-radius: ${({ borderRadius }) => borderRadius || 0.5}rem;
+    border-radius: ${({ borderRadius }) => borderRadius || 0}rem;
+    width: ${({buttonWidth})=> buttonWidth };
     display: inline-block;
+    line-height: 1.92rem;
     white-space: nowrap;
     cursor: pointer;
 

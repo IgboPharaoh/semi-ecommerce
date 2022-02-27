@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ProductCard from './ProductCard'
-import { productsData } from './utils'
+import { productsData } from '../../utils'
 
 const Products = ({cartegory}) => {
   return (
@@ -14,6 +14,7 @@ const Products = ({cartegory}) => {
                 key = {item.id}
                 title = {item.title}
                 price = {item.price}
+                titleBrand = {item.titlebrand}
             />
         ))}
         </div>

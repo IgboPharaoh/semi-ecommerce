@@ -3,19 +3,21 @@ import styled from 'styled-components'
 
 const ProductSelectImage = ({productImage}) => {
   return (
+    <>
     <StyledImage>
       <div className="product-image__small">
-        <img src={productImage} alt="item-img" className="product-select__small-img"/>
-        <img src={productImage} alt="item-img" className="product-select__small-img"/>
-        <img src={productImage} alt="item-img" className="product-select__small-img"/>
+        <img src={productImage} alt="item-img" className="product-image__small-img"/>
+        <img src={productImage} alt="item-img" className="product-image__small-img"/>
+        <img src={productImage} alt="item-img" className="product-image__small-img"/>
       </div>
       <div>
-        <img src={productImage} alt="item-img" className="product-select__big-img"/>
+        <img src={productImage} alt="item-img" className="product-image__big-img"/>
       </div>
     </StyledImage>
+    </>
   )
 }
-const StyledImage = styled.img`
+const StyledImage = styled.div`
   display: flex;
   .product-image{
     &__small{
@@ -28,9 +30,9 @@ const StyledImage = styled.img`
       padding-bottom: 4rem;
     }
     &__big-img {
-      height: 61rem;
-      width: 51.1rem;
-      padding: 0rem 4rem 10rem 0rem;
+      height: 51.1rem;
+      width: 61rem;
+      padding: 0rem 10rem 0rem 4rem;
     }
   }
 `

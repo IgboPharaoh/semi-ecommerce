@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ProductCard = ({img, title, price}) => {
+const ProductCard = ({img, title, price, titleBrand}) => {
   return (
     <StyledCard>
         <img src={img} alt="product-img" className="product-card__product-img"/>
@@ -13,7 +13,7 @@ const ProductCard = ({img, title, price}) => {
             </svg>
         </div>
         <div className="product-card__text-section">
-            <p className="product-card__product-title">{title}</p>
+            <p className="product-card__product-title">{titleBrand} {title}</p>
             <p className="product-card__product-price">${price}</p>
         </div>
     </StyledCard>
