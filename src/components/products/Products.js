@@ -4,6 +4,14 @@ import ProductCard from './ProductCard'
 import { productsData } from '../../utils'
 
 const Products = ({cartegory}) => {
+
+    const handleClick =() => {   
+        
+            console.log('productsData.length')
+
+    }
+        
+
   return (
     <StyledProducts>
         <h5  className="products-section__title">{cartegory || 'Category Name'}</h5>
@@ -15,6 +23,7 @@ const Products = ({cartegory}) => {
                 title = {item.title}
                 price = {item.price}
                 titleBrand = {item.titlebrand}
+                onClick = {handleClick}
             />
         ))}
         </div>
